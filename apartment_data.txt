@@ -1,0 +1,5 @@
+16F  1 Bed  1 Bath  $1600 A
+15F  2 Bed  2 Bath  $1500 A
+14F  3 Bed  2 Bath  $1400 A
+12F  4 Bed  4 Bath  $1800 A
+11F  5 Bed  2 Bath  $1700 A
