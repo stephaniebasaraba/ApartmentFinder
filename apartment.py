@@ -33,7 +33,7 @@ class Apartment:
         return self.apt_rent
 
     def set_apt_status(self,aptStatus):
-        self.apt_status = aptRent
+        self.apt_status = aptStatus
 
     def get_apt_status(self):
         return self.apt_status

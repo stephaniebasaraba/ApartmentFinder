@@ -21,7 +21,6 @@ class Apartment_DB:
         for apartment in self.apartments:
             if apartment.apt_status == 'A':
                 avail_apts.append(apartment.apt_num)
-                break
         return avail_apts
 
     def getRentedApartments(self):
@@ -29,15 +28,21 @@ class Apartment_DB:
         for apartment in self.apartments:
             if apartment.apt_status == 'R':
                 rented_apts.append(apartment.apt_num)
-                break
         return rented_apts
 
-    #def changeApartmentStatus(self, aptNum, aptStatus):
-        #for tenant in self.tenants:
-            #if tenants.getId() == apt_id:
-                #found_apt = tenant
-                #break
-        #return found_apt
+    def changeApartmentStatus(self, aptNum, aptStatus):
+        for apartment in self.apartments:
+            if apartment.apt_num == aptNum:
+                if (apartment.apt_status == 'R' and aptStatus == 'A'):
+                    apartment.set_apt_status('A')
+                    break
+                elif (apartment.apt_status == 'A' and aptStatus == 'R'):
+                    apartment.set_apt_status('R')
+                    break
+                else:
+                    print(aptStatus + ' is already the apartment status.')
+                    break
+        return apartment
 
     def getTotalApartments(self):
         count_apts = 0
@@ -65,9 +70,9 @@ class Apartment_DB:
         for object in apartment_data:
             item = object.split(' ')
             apt_num = item[0]
-            apt_bedrm = item[1]
-            apt_baths = item[2]
-            apt_rent = item[3]
+            apt_bedrm = int(item[1])
+            apt_baths = int(item[2])
+            apt_rent = int(item[3])
             apt_status = 'A'
             apt_status = apt_status.replace('\n','')
             self.apartments.append(Apartment(apt_num, apt_bedrm, apt_baths, apt_rent, apt_status))
@@ -85,12 +90,16 @@ apartment_db.loadApartments('apartment_data.txt')
 # print(get_apartment.apt_num, get_apartment.apt_rent)
 
 # find available apartments
-avail_apt = apartment_db.getAvailApartments()
-print(avail_apt)
+# avail_apt = apartment_db.getAvailApartments()
+# print(avail_apt)
 
 # find rented apartments
 # rented_apt = apartment_db.getRentedApartments()
 # print(rented_apt)
+
+# change apartment status
+# change_status = apartment_db.changeApartmentStatus('101', 'A')
+# print(change_status.apt_num, change_status.apt_status)
 
 # count all apartments
 # count_apts = apartment_db.getTotalApartments() # Test countTenants method

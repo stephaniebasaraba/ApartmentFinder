@@ -1,7 +1,7 @@
 from random import randint
 
 class Tenant:
-    def __init__(self, tenant_fName, tenant_lName, tenant_aptNum):
+    def __init__(self,tenant_fName,tenant_lName,tenant_aptNum):
         self.tenant_id = ''.join(["%s" % randint(0, 9) for num in range(0, 5)])
         self.tenant_fName = tenant_fName
         self.tenant_lName = tenant_lName
