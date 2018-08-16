@@ -44,9 +44,9 @@ tenant_db.addTenant(tenant) # Test add Tenant to tenant_db
 # get_tenant = tenant_db.getTenant('123') # Test get Tenant method
 # print(get_tenant.tenant_fName, get_tenant.tenant_lName)
 
-remove_tenant = tenant_db.removeTenant('123') # Test get Tenant method
+# remove_tenant = tenant_db.removeTenant('123') # Test get Tenant method
 # print(get_tenant.tenant_fName, get_tenant.tenant_lName)
-print(remove_tenant.tenant_fName, remove_tenant.tenant_lName, remove_tenant.tenant_aptNum)
+# print(remove_tenant.tenant_fName, remove_tenant.tenant_lName, remove_tenant.tenant_aptNum)
 
 # count_tenants = tenant_db.countTenants() # Test countTenants method
 # print('Count Tenants returned: ' + str(count_tenants))

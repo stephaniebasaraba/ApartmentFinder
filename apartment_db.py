@@ -20,7 +20,7 @@ class Apartment_DB:
         avail_apts = []
         for apartment in self.apartments:
             if apartment.apt_status == 'A':
-                avail_apts.append(apartment.apt_num)
+                avail_apts.append(apartment)
         return avail_apts
 
     def getRentedApartments(self):
@@ -79,8 +79,13 @@ class Apartment_DB:
         apartment_data.close()
         
 
-apartment_db = Apartment_DB() # Create apartment_db
-apartment_db.loadApartments('apartment_data.txt')
+# apartment_db = Apartment_DB() # Create apartment_db as variable for Apartment_DB
+# apartment_db.loadApartments('apartment_data.txt') #use variable apartmend_db to run text file
+
+# count_apts = apartment_db.getTotalApartments() # Test getTotalApartments() method
+# print('Total count of apartments: ' + str(count_apts))
+
+
 # apartment = Apartment('16F', '1 Bdr', '1 Bath', '$1,500', 'A')
 # apartment_two = Apartment('16B', '1 Bdr', '1 Bath', '$1,600', 'R')
 # apartment_db.addApartment(apartment)
