@@ -7,13 +7,13 @@ class Tenant:
         self.tenant_lName = tenant_lName
         self.tenant_aptNum = tenant_aptNum
 
-    def set_fName(self,fName):
-        self.tenant_fName = fName
+    def get_fName(self):
+        return self.tenant_fName
 
-    def set_lName(self,lName):
-        self.tenant_lName = lName
+    def get_lName(self):
+        return self.tenant_lName
 
-    def set_tenant_aptNum(self,aptNum):
-        self.tenant_aptNum = aptNum
+    def get_tenant_aptNum(self,):
+        return self.tenant_aptNum
 
 

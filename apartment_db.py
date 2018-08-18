@@ -27,7 +27,7 @@ class Apartment_DB:
         rented_apts = []
         for apartment in self.apartments:
             if apartment.apt_status == 'R':
-                rented_apts.append(apartment.apt_num)
+                rented_apts.append(apartment)
         return rented_apts
 
     def changeApartmentStatus(self, aptNum, aptStatus):
@@ -48,7 +48,6 @@ class Apartment_DB:
         count_apts = 0
         for apartment in self.apartments:
             count_apts += 1
-        print('There are a total of ' + str(count_apts) + ' apartments.')
         return count_apts
 
     def getTotalAvailable(self):
@@ -79,44 +78,4 @@ class Apartment_DB:
         apartment_data.close()
         
 
-# apartment_db = Apartment_DB() # Create apartment_db as variable for Apartment_DB
-# apartment_db.loadApartments('apartment_data.txt') #use variable apartmend_db to run text file
-
-# count_apts = apartment_db.getTotalApartments() # Test getTotalApartments() method
-# print('Total count of apartments: ' + str(count_apts))
-
-
-# apartment = Apartment('16F', '1 Bdr', '1 Bath', '$1,500', 'A')
-# apartment_two = Apartment('16B', '1 Bdr', '1 Bath', '$1,600', 'R')
-# apartment_db.addApartment(apartment)
-# apartment_db.addApartment(apartment_two)
-
-# get_apartment = apartment_db.getApartment('16F')
-# print(get_apartment.apt_num, get_apartment.apt_rent)
-
-# find available apartments
-# avail_apt = apartment_db.getAvailApartments()
-# print(avail_apt)
-
-# find rented apartments
-# rented_apt = apartment_db.getRentedApartments()
-# print(rented_apt)
-
-# change apartment status
-# change_status = apartment_db.changeApartmentStatus('101', 'A')
-# print(change_status.apt_num, change_status.apt_status)
-
-# count all apartments
-# count_apts = apartment_db.getTotalApartments() # Test countTenants method
-# print('Total count of apartments: ' + str(count_apts))
-
-# count available apartments
-# count_avail = apartment_db.getTotalAvailable() # Test countTenants method
-# print('Total count of available apartments: ' + str(count_avail))
-
-# count rented apartments
-# count_rented = apartment_db.getTotalRented() # Test countTenants method
-# print('Total count of rented apartments: ' + str(count_rented))
-
-# apartment_db.loadApartments('apartment_data.txt')
-# print(load_apartments)
+apartment_db = Apartment_DB() # Create apartment_db as variable for Apartment_DB
