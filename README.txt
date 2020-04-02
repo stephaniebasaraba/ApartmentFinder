@@ -5,7 +5,7 @@ At program start, data from the file apartment_data.txt is populated into the da
 MENU OPTIONS
 
 1.) Rent/Lease Apartment
-The user is prompted to enter a minimum number of bedrooms required, a minimum number of baths required, and maximum amount of rent the user is willing to pay.  The program searches the apartments database and display apartments that meet the user’s requirements. 
+The user is prompted to enter a minimum number of bedrooms required, a minimum number of baths required, and maximum amount of rent the user is willing to pay.  The program searches the apartments database and display apartments that meet the user’s requirements
 
 If the user decides to continue with the lease, the program will prompt the user for the following information: first name and last name.  Once the user’s entry is complete, the program will create a tenant and add the tenant to the Tenants database.  The selected apartment status must be changed to rented (‘R’)
 
@@ -70,7 +70,7 @@ This method takes an apartment number as parameter and returns the apartment ass
 3.) getAvailApartments
 This method takes no parameters.  It returns all apartments with ‘A’ status
 
-4.)	getRentedApartements
+4.) getRentedApartements
 This method takes no parameters.  It returns all apartments with status equal to ‘R’ 
 
 5.) changeApartmentStatus
@@ -79,13 +79,13 @@ This method takes an apartment number and status value (‘R’ or ‘A’) as p
 6.) getTotalApartments
 This method takes no parameters.  It returns a count of the apartments in the database
 
-7.)	getTotalAvailable
+7.) getTotalAvailable
 This method takes no parameters. It returns a count of the available apartments
 
-8.)	getTotalRented
+8.) getTotalRented
 This method takes no parameters. It returns a count of rented apartments
 
-9.)	loadApartments
+9.) loadApartments
 This method takes a file as parameter.  It loads apartments into the apartments database from a file.  Each apartment will have a status of ‘A’.  This method does not return a value
 
 
