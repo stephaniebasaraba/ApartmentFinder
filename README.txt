@@ -4,31 +4,31 @@ At program start, data from the file apartment_data.txt is populated into the da
 
 MENU OPTIONS
 
-1.)	Rent/Lease Apartment
+1.) Rent/Lease Apartment
 The user is prompted to enter a minimum number of bedrooms required, a minimum number of baths required, and maximum amount of rent the user is willing to pay.  The program searches the apartments database and display apartments that meet the user’s requirements. 
 
 If the user decides to continue with the lease, the program will prompt the user for the following information: first name and last name.  Once the user’s entry is complete, the program will create a tenant and add the tenant to the Tenants database.  The selected apartment status must be changed to rented (‘R’)
 
-2.)	Search Available Apartments
+2.) Search Available Apartments
 The user is prompted to enter a minimum number of bedrooms required, a minimum number of baths required, and maximum rent amount the user is willing to pay.  The program displays a list of available apartments that meet the user’s requirements. If the search result is 0, display an appropriate message
 
-3.)	Make Apartment Available
+3.) Make Apartment Available
 The user is prompted for the apartment number.  The program searches for the corresponding apartment.  If the apartment is currently under lease, the program changes the apartment status to available and deletes the current tenant from the Tenants database.  If the apartment is not currently under lease, the program displays a message informing the user that the apartment is already available.  If no apartment is found with the apartment number entered, the program displays an appropriate message
 
 4.) List Available Apartments
 Searches the apartments database and displays all available apartments
 
-5.)	List Rented/Leased Apartments
+5.) List Rented/Leased Apartments
 Search the apartments and tenants databases and displays details about each rented apartment (apartment number, number of  
 bedrooms, number of baths, rent amount, tenant id, and tenant name)
 
-6.)	Display Tenant Information
+6.) Display Tenant Information
 Prompts the user for the apartment number.  If the apartment is found and under lease, details about the current tenant are displayed.  If the apartment is not currently under rent, the program displays message indicating that the apartment is available for rent.  If the apartment was not found with that number, an error is displayed.
 
-7.)	Add New Apartment
+7.) Add New Apartment
 The program prompsts the user for the apartment details (apartment number, number of bed rooms, number of baths, rent amount) and adds the apartment to the apartments database as an available apartment.
 
-8.	Exit
+8.  Exit
 Displays a summary report (total number of apartments, total number of apartments under lease, total number of apartments available, total number of tenants) and exits the program
 
 MODULE DEFINITIONS:
@@ -43,8 +43,10 @@ Tenants database module (tenant_database.py)
 This module contains class Tenant_db used to store all tenants.  The class includes a list (tenants) as the tenants database.  Each item in the list is a Tenant object.  The constructor for this class takes no arguments; once an instance of the class is created, tenants is initialized as an instance variable containing an empty list.  The following methods are included in the class:
 1.) addTenant
 This method takes one parameter.  When this method is called it is passed a Tenant object.  This method adds a tenant to the Tenant database.  This method does not return a value
+
 2.) getTenant
 This method takes an apartment number as parameter and returns the tenant associated with the apartment.  If no tenant is found, the method returns a blank string
+
 3.) countTenants
 This method takes no parameters.  It returns the number of tenants in the Tenants database
 
