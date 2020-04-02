@@ -41,26 +41,50 @@ This module contains class Tenant which contains attributes and methods for a te
 
 Tenants database module (tenant_database.py)
 This module contains class Tenant_db used to store all tenants.  The class includes a list (tenants) as the tenants database.  Each item in the list is a Tenant object.  The constructor for this class takes no arguments; once an instance of the class is created, tenants is initialized as an instance variable containing an empty list.  The following methods are included in the class:
-1.) addTenant: This method takes one parameter.  When this method is called it is passed a Tenant object.  This method adds a tenant to the Tenant database.  This method does not return a value
-2.) getTenant: This method takes an apartment number as parameter and returns the tenant associated with the apartment.  If no tenant is found, the method returns a blank string
-3.) countTenants:  This method takes no parameters.  It returns the number of tenants in the Tenants database
-4.) removeTenant: This method takes the apartment number as a parameter.  It deletes the tenant associated with the apartment number and returns the tenant.  If no tenant is found, the method returns an empty string
-5.) getAllTenants: This method takes no parameters.  It returns all tenant in the Tenants database
+1.) addTenant
+This method takes one parameter.  When this method is called it is passed a Tenant object.  This method adds a tenant to the Tenant database.  This method does not return a value
+2.) getTenant
+This method takes an apartment number as parameter and returns the tenant associated with the apartment.  If no tenant is found, the method returns a blank string
+3.) countTenants
+This method takes no parameters.  It returns the number of tenants in the Tenants database
+
+4.) removeTenant
+This method takes the apartment number as a parameter.  It deletes the tenant associated with the apartment number and returns the tenant.  If no tenant is found, the method returns an empty string
+
+5.) getAllTenants
+This method takes no parameters.  It returns all tenant in the Tenants database
 
 Apartment module (apartment.py)
 This module contains the class Apartment used to create apartments. The class includes the following attributes: apartment number (apt_num), number of bedrooms (apt_bedrm), number of baths (apt_baths), rent amount (apt_rent), and apartment status (apt_status).  Each attribute includes a get and set method. The arguments passed to the class constructor should be used to initialize the class attributes.  The apartment class is used in the client module and the apartment database module.
 
 Apartment database module (apartment_db.py)
 This module includes class Apartment_db used to store and retrieve apartments and also perform rental operations.  This class contains instance variable, apartments (list), which stores the apartments details.  The constructor of this class takes no arguments.  Once an instance of the class is created, the apartments variable will be created as an empty list.  The following methods are included in this class:
-1.) addApartment: This method takes an apartment object as argument and add the apartment to the apartments list.  Once the apartment is added, the method with print a message indicating the apartment was successfully added.  This method does not return a value
-2.) getApartment: This method takes an apartment number as parameter and returns the apartment associated with the apartment number
-3.)	getAvailApartments: This method takes no parameters.  It returns all apartments with ‘A’ status
-4.)	getRentedApartements: This method takes no parameters.  It returns all apartments with status equal to ‘R’ 
-5.)	changeApartmentStatus: This method takes an apartment number and status value (‘R’ or ‘A’) as parameters.  If the apartment is found, this method changes the status of the corresponding apartment.  Status should be set to ‘R’ if the apartment needs to be status as rented or ‘A’ if the apartment needs to be made available.  If the current status of the apartment is the same as the value passed, display a message indicating that the apartment status was not changed.  If the apartment was not found, display a message that the apartment number is not valid.  This method does not return a value  
-6.)	getTotalApartments: This method takes no parameters.  It returns a count of the apartments in the database
-7.)	getTotalAvailable: This method takes no parameters. It returns a count of the available apartments
-8.)	getTotalRented: This method takes no parameters. It returns a count of rented apartments
-9.)	loadApartments: This method takes a file as parameter.  It loads apartments into the apartments database from a file.  Each apartment will have a status of ‘A’.  This method does not return a value
+1.) addApartment
+This method takes an apartment object as argument and add the apartment to the apartments list.  Once the apartment is added, the method with print a message indicating the apartment was successfully added.  This method does not return a value
+
+2.) getApartment
+This method takes an apartment number as parameter and returns the apartment associated with the apartment number
+
+3.) getAvailApartments
+This method takes no parameters.  It returns all apartments with ‘A’ status
+
+4.)	getRentedApartements
+This method takes no parameters.  It returns all apartments with status equal to ‘R’ 
+
+5.) changeApartmentStatus
+This method takes an apartment number and status value (‘R’ or ‘A’) as parameters.  If the apartment is found, this method changes the status of the corresponding apartment.  Status should be set to ‘R’ if the apartment needs to be status as rented or ‘A’ if the apartment needs to be made available.  If the current status of the apartment is the same as the value passed, display a message indicating that the apartment status was not changed.  If the apartment was not found, display a message that the apartment number is not valid.  This method does not return a value  
+
+6.) getTotalApartments
+This method takes no parameters.  It returns a count of the apartments in the database
+
+7.)	getTotalAvailable
+This method takes no parameters. It returns a count of the available apartments
+
+8.)	getTotalRented
+This method takes no parameters. It returns a count of rented apartments
+
+9.)	loadApartments
+This method takes a file as parameter.  It loads apartments into the apartments database from a file.  Each apartment will have a status of ‘A’.  This method does not return a value
 
 
 
